@@ -1,0 +1,58 @@
+CREATE TABLE Roles (
+    roleID INT PRIMARY KEY IDENTITY,
+    roleName NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE RequestStatuses (
+    statusID INT PRIMARY KEY IDENTITY,
+    statusName NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Tech (
+    techID INT PRIMARY KEY IDENTITY,
+    techType NVARCHAR(50) NOT NULL,  
+    techModel NVARCHAR(50),           
+    serialNumber NVARCHAR(50)         
+);
+
+CREATE TABLE Users (
+    userID INT PRIMARY KEY IDENTITY,
+    fio NVARCHAR(100) NOT NULL,
+    phone NVARCHAR(20),
+    login NVARCHAR(50) NOT NULL UNIQUE,
+    password NVARCHAR(50) NOT NULL,
+    roleID INT FOREIGN KEY REFERENCES Roles(roleID)
+);
+
+CREATE TABLE Requests (
+    requestID INT PRIMARY KEY IDENTITY,
+    startDate DATETIME NOT NULL,
+    techID INT FOREIGN KEY REFERENCES Tech(techID),  
+    problemDesc NVARCHAR(255),
+    statusID INT FOREIGN KEY REFERENCES RequestStatuses(statusID),
+    completionDate DATETIME,
+    masterID INT FOREIGN KEY REFERENCES Users(userID),
+    clientID INT FOREIGN KEY REFERENCES Users(userID)
+);
+
+CREATE TABLE Comments (
+    commentID INT PRIMARY KEY IDENTITY,
+    message NVARCHAR(255),
+    masterID INT FOREIGN KEY REFERENCES Users(userID),
+    requestID INT FOREIGN KEY REFERENCES Requests(requestID)
+);
+
+CREATE TABLE Parts (
+    partID INT PRIMARY KEY IDENTITY,
+    partName NVARCHAR(100) NOT NULL,
+    description NVARCHAR(255),
+);
+
+CREATE TABLE WorkLogs (
+    logID INT PRIMARY KEY IDENTITY,
+    requestID INT FOREIGN KEY REFERENCES Requests(requestID),
+    technicianID INT FOREIGN KEY REFERENCES Users(userID),
+    workDate DATETIME NOT NULL,
+    partID INT FOREIGN KEY REFERENCES Parts(partID),
+    notes NVARCHAR(255)
+);

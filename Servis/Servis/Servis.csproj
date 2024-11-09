@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5178620-3CA6-4E64-AF04-523718031DAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Servis</RootNamespace>
+    <AssemblyName>Servis</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminMainForm.Designer.cs">
+      <DependentUpon>adminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminNotifForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminNotifForm.Designer.cs">
+      <DependentUpon>adminNotifForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminRequestForm.Designer.cs">
+      <DependentUpon>adminRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminWorkLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminWorkLogForm.Designer.cs">
+      <DependentUpon>adminWorkLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientForm.Designer.cs">
+      <DependentUpon>clientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginHistory.Designer.cs">
+      <DependentUpon>LoginHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerMainForm.Designer.cs">
+      <DependentUpon>managerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="requestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requestForm.Designer.cs">
+      <DependentUpon>requestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="techAskPartsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techAskPartsForm.Designer.cs">
+      <DependentUpon>techAskPartsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="techChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techChangeForm.Designer.cs">
+      <DependentUpon>techChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="techMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techMainForm.Designer.cs">
+      <DependentUpon>techMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regForm.Designer.cs">
+      <DependentUpon>regForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="techReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techReportForm.Designer.cs">
+      <DependentUpon>techReportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminMainForm.resx">
+      <DependentUpon>adminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminNotifForm.resx">
+      <DependentUpon>adminNotifForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminRequestForm.resx">
+      <DependentUpon>adminRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminWorkLogForm.resx">
+      <DependentUpon>adminWorkLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientForm.resx">
+      <DependentUpon>clientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHistory.resx">
+      <DependentUpon>LoginHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerMainForm.resx">
+      <DependentUpon>managerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="regForm.resx">
+      <DependentUpon>regForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="requestForm.resx">
+      <DependentUpon>requestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="techAskPartsForm.resx">
+      <DependentUpon>techAskPartsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="techChangeForm.resx">
+      <DependentUpon>techChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechMainForm.resx">
+      <DependentUpon>techMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="techReportForm.resx">
+      <DependentUpon>techReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
